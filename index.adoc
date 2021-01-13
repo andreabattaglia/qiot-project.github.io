@@ -1,0 +1,54 @@
+Welcome to QIoT Community! 
+==========================
+
+We are people passionate about tecnology and electronics and we want to explore the usage of Containers tecnology and *Quarkus* framework in the IoT/IIoT world.
+
+We think that the combination of speed and lightness of Quarkus application builded in native binary application and the leverage of Container deployment using Podman can bring the development of IIoT device's software to a new level, pushing the development's efficiency from the Cloud to the Edge.
+
+We are in the initial phase
+---------------------------
+
+We started the project late 2020, and still in an initial and explorative phase. We want to start with something simple and extend to reach high performance and scalability. 
+
+Cloud Service
+~~~~~~~~~~~~~
+
+We are going to create a basic Cloud Environmente since we have want spend our effort on the device side. The idea is to use an ActiveMQ Broker, InfluxDB, Grafana and a very little of Java code to receive data from device on field. 
+
+*TODO* There will be another service that permit to register a new device and issue an X509 Certificate that device must use to connect with the service exposed by Cloud.
+
+At the moment the _Topic_ and _Payload_ used in MQTT are custom defined, we are evalueting the https://sparkplug.eclipse.org/[Eclipse Sparkplug protocol].
+
+We want to mantaint the Cloud side as simple as possible since we'll spend our best effort on the device side.
+
+Rest API (to get a new client certificate)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*TODO*
+
+MQTT Topie and Payload definition
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*TODO*
+
+Device Software
+~~~~~~~~~~~~~~~
+In this years, thanks to the higher computing power and lower energy consumption of the new CPUs ans SoM, the IoT world are moving more e more inteligence from Cloud to the Edge. This also means having services closer to the user and therefore much more responsive, less internet bandwidth consumption or even not having an internet connection always available.
+
+The downside is that we need to update the software in the field more frequently and efficiently and that if an update is not successful, return to the previous version without problems.
+
+These aspects have already been resolved on the Cloud side: *Containers*
+
+What we aim for is therefore to use Containers technology to deliver software to the Edge. 
+In this project we are using Podman to manage the containers over a Linux distribution born to this scope, https://getfedora.org/en/iot/[Fedora IoT].
+Although anything can go inside containers, we are lovers of Java and Quarkus and therefore we will use these with GraalVM to obtain light and fast containers with out applications.
+
+Platform supported
+^^^^^^^^^^^^^^^^^^
+We want to use Edge nodes with this processor architecture: x86_64, aarch64, and armhfp. *TODO*
+
+Simulator on x86_64
+^^^^^^^^^^^^^^^^^^
+*TODO*
+
+
+
+
